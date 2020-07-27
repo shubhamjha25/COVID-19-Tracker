@@ -1,0 +1,32 @@
+.card-cont{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.my-card{
+    padding: 20px 40px;
+    border: 3px solid black;
+    border-radius: 30px;
+    margin-right: 6.5rem;
+    text-align: center;
+}
+
+.my-card h1, .my-card h3{
+    font-weight: 650;
+    color: black;
+} 
+
+.card-1{
+    background-color: #f74036;
+    
+}
+
+.card-2{
+    background-color: lightgreen;
+}
+
+.card-3{
+    background-color: #848a81;
+}
