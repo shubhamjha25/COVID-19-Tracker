@@ -1,3 +1,4 @@
+// Variables
 var tablebody=document.getElementById('tablebody');
 let searchbox=document.getElementById('searchbox');
 let searchbtn=document.getElementById('searchbtn');
@@ -6,9 +7,9 @@ let confirm = document.getElementById('confirm');
 let recover = document.getElementById('recover');
 let death = document.getElementById('death');
 let str='';
-/*let global = data.Global;
-        confirm.innerHTML = golabl.TotalConfirmed;*/
 
+
+// Fetch API
 fetch('https://api.covid19api.com/summary').then(response => response.json()).then(data => {
     let global = data.Global;
     confirm.innerHTML = global.TotalConfirmed;
@@ -32,6 +33,8 @@ fetch('https://api.covid19api.com/summary').then(response=>response.json()).then
     tablebody.innerHTML="Sorry! No Data is Available. Please Check Your Internet Connection.";
 });
 
+
+// Handle Form Submit 
 searchbox.addEventListener('input',(e)=>{
     let val=e.target.value;
     str=str.toLowerCase();
@@ -45,3 +48,21 @@ searchbox.addEventListener('input',(e)=>{
         
     }
 });
+
+
+// Script for Back To Top Action
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        mybutton.style.display = "block";
+    else 
+        mybutton.style.display = "none";
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
